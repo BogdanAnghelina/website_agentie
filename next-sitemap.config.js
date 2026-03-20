@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+export default {
   siteUrl: 'https://antigravitydigital.ro',
   generateRobotsTxt: true,
   sitemapSize: 5000,
