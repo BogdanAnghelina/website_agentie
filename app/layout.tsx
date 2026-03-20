@@ -7,14 +7,14 @@ import CustomCursor from '@/components/ui/CustomCursor'
 import DarkModeInit from '@/components/providers/DarkModeInit'
 
 const plusJakarta = localFont({
-  src: '../public/fonts/PlusJakartaSans.woff2',
+  src: './fonts/PlusJakartaSans.woff2',
   variable: '--font-head',
   display: 'swap',
   weight: '400 800', // Variable font weight range
 })
 
 const dmSans = localFont({
-  src: '../public/fonts/DMSans.woff2',
+  src: './fonts/DMSans.woff2',
   variable: '--font-body',
   display: 'swap',
   weight: '300 600', // Variable font weight range
