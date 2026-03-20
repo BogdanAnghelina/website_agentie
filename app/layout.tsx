@@ -3,7 +3,6 @@ import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import CustomCursor from '@/components/ui/CustomCursor'
 import DarkModeInit from '@/components/providers/DarkModeInit'
 
 const plusJakarta = localFont({
@@ -34,7 +33,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ro" suppressHydrationWarning>
       <body className={`${plusJakarta.variable} ${dmSans.variable} font-body bg-cream text-text-1`}>
         <DarkModeInit />
-        <CustomCursor />
         <Navbar />
         <main>{children}</main>
         <Footer />
