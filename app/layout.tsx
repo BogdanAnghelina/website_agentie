@@ -4,7 +4,6 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CustomCursor from '@/components/ui/CustomCursor'
-import SmoothScroll from '@/components/providers/SmoothScroll'
 import DarkModeInit from '@/components/providers/DarkModeInit'
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -36,11 +35,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${plusJakarta.variable} ${dmSans.variable} font-body bg-cream text-text-1`}>
         <DarkModeInit />
         <CustomCursor />
-        <SmoothScroll>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
