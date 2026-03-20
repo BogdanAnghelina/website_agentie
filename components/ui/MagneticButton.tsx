@@ -4,11 +4,12 @@ import { useRef } from 'react'
 interface Props {
   children: React.ReactNode
   className?: string
+  style?: React.CSSProperties
   href?: string
   onClick?: () => void
 }
 
-export default function MagneticButton({ children, className, href, onClick }: Props) {
+export default function MagneticButton({ children, className, style, href, onClick }: Props) {
   const ref = useRef<HTMLElement>(null)
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -28,6 +29,7 @@ export default function MagneticButton({ children, className, href, onClick }: P
     onMouseMove: handleMouseMove,
     onMouseLeave: handleMouseLeave,
     className,
+    style,
     onClick,
   }
 

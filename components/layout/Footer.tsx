@@ -5,7 +5,7 @@ export default function Footer() {
     <footer style={{ background: '#1F1E2A', borderTop: '1px solid rgba(255,255,255,0.05)', padding: '64px 56px 40px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Top grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1.8fr 1fr 1fr 1fr', gap: '48px', marginBottom: '56px' }} className="footer-top-grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1fr] gap-8 lg:gap-12 mb-14">
           {/* Brand column */}
           <div>
             <Link href="/" className="font-head text-[18px] font-extrabold text-[#F4F0E8] no-underline tracking-[-0.02em] inline-block mb-3.5">
@@ -120,20 +120,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @media (max-width: 1024px) {
-          .footer-top-grid {
-            grid-template-columns: 1fr 1fr !important;
-          }
-        }
-        @media (max-width: 640px) {
-          .footer-top-grid {
-            grid-template-columns: 1fr !important;
-            gap: 32px !important;
-          }
-        }
-      `}</style>
     </footer>
   )
 }

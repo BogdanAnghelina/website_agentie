@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 }
 
 const faqItems = [
-  { q: 'Cât durează să faceți un site?', a: 'Un landing page simplu: 1-2 săptămâni. Un site de prezentare complet: 3-5 săptămâni. Un magazin online: 4-8 săptămâni. Depinde de complexitate și de cât de rapid primim feedback și materiale de la tine.' },
-  { q: 'Pe ce platformă construiți?', a: 'Depinde de ce are nevoie afacerea ta. WordPress pentru site-uri de conținut și flexibilitate maximă. React/Next.js pentru performanță maximă și aplicații. WooCommerce sau soluții custom pentru eCommerce. Nu avem un stack favorit — avem stack-ul potrivit pentru fiecare proiect.' },
-  { q: 'Rămâne site-ul al meu după?', a: '100%. Codul, domeniul, hostingul — toate îți aparțin. Noi nu avem sisteme proprietare care te blochează. Poți lucra cu orice alt developer după noi fără probleme.' },
-  { q: 'Includeți și hosting?', a: 'Nu hosting direct, dar te îndrumăm spre soluția potrivită și te ajutăm cu setup-ul. Recomandăm de obicei soluții cloud (Vercel, Netlify, AWS) sau hosting managed în funcție de stack și trafic.' },
-  { q: 'Pot face singur update-uri pe site?', a: 'Da. Construim cu un CMS care să îți permită editarea conținutului fără să atingi codul. Livrăm și training video pentru echipa ta.' },
-  { q: 'Ce trebuie să pregătesc eu?', a: 'Textele, fotografiile și accesul la brand assets. Dacă nu ai, putem recomanda copywriter și fotograf sau putem folosi fotografii de stoc premium. Cu cât mai clare sunt obiectivele la brief, cu atât mai rapid și mai bine livrăm.' },
+  { question: 'Cât durează să faceți un site?', answer: 'Un landing page simplu: 1-2 săptămâni. Un site de prezentare complet: 3-5 săptămâni. Un magazin online: 4-8 săptămâni. Depinde de complexitate și de cât de rapid primim feedback și materiale de la tine.' },
+  { question: 'Pe ce platformă construiți?', answer: 'Depinde de ce are nevoie afacerea ta. WordPress pentru site-uri de conținut și flexibilitate maximă. React/Next.js pentru performanță maximă și aplicații. WooCommerce sau soluții custom pentru eCommerce. Nu avem un stack favorit — avem stack-ul potrivit pentru fiecare proiect.' },
+  { question: 'Rămâne site-ul al meu după?', answer: '100%. Codul, domeniul, hostingul — toate îți aparțin. Noi nu avem sisteme proprietare care te blochează. Poți lucra cu orice alt developer după noi fără probleme.' },
+  { question: 'Includeți și hosting?', answer: 'Nu hosting direct, dar te îndrumăm spre soluția potrivită și te ajutăm cu setup-ul. Recomandăm de obicei soluții cloud (Vercel, Netlify, AWS) sau hosting managed în funcție de stack și trafic.' },
+  { question: 'Pot face singur update-uri pe site?', answer: 'Da. Construim cu un CMS care să îți permită editarea conținutului fără să atingi codul. Livrăm și training video pentru echipa ta.' },
+  { question: 'Ce trebuie să pregătesc eu?', answer: 'Textele, fotografiile și accesul la brand assets. Dacă nu ai, putem recomanda copywriter și fotograf sau putem folosi fotografii de stoc premium. Cu cât mai clare sunt obiectivele la brief, cu atât mai rapid și mai bine livrăm.' },
 ]
 
 export default function WebDevelopmentPage() {

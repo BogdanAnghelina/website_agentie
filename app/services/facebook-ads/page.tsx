@@ -66,7 +66,7 @@ export default function FacebookAdsPage() {
                 pe care îi <span className="text-orange">targetezi.</span>
               </span>
             </h1>
-            <p className="text-[#F4F0E8] mb-10 max-w-[520px]" style={{ fontSize: 'clamp(16px, 1.4vw, 19px)', lineHeight: 1.65, opacity: 0.72, animation: 'hero-up 0.75s cubic-bezier(0.16,1,0.3,1) forwards 0.78s', opacity: 0 }}>
+            <p className="text-[#F4F0E8] mb-10 max-w-[520px]" style={{ fontSize: 'clamp(16px, 1.4vw, 19px)', lineHeight: 1.65, animation: 'hero-up 0.75s cubic-bezier(0.16,1,0.3,1) forwards 0.78s', opacity: 0 }}>
               Facebook & Instagram Ads cu targetare demografică, comportamentală și de interes. Ajungem la publicul tău ideal — nu la toată lumea, ci la cei care cumpără.
             </p>
             <div className="flex flex-wrap gap-4" style={{ animation: 'hero-up 0.75s cubic-bezier(0.16,1,0.3,1) forwards 0.94s', opacity: 0 }}>

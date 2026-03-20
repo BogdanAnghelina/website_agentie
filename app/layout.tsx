@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     template: '%s | Antigravity Digital',
   },
   description: 'Creștem afaceri românești prin Google Ads, SEO și Web Development. Strategii bazate pe date, rezultate măsurabile.',
+  metadataBase: new URL('https://antigravitydigital.ro'),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
