@@ -25,10 +25,10 @@ export default function HeroClient() {
         className="font-head font-extrabold tracking-[-0.035em] text-[#F4F0E8] mb-6"
         style={{ fontSize: 'clamp(46px, 5vw, 82px)', lineHeight: 1.03 }}
       >
-        <span className="block" style={{ animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards' }}>Marketing care</span>
-        <span className="block" style={{ animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>aduce clienți,</span>
-        <span className="block text-orange" style={{ animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.25s', opacity: 0 }}>
-          <TextScramble text="nu doar click-uri." />
+        <span className="block" style={{ animation: 'hero-up 0.5s cubic-bezier(0.16,1,0.3,1) forwards' }}>Marketing care</span>
+        <span className="block" style={{ animation: 'hero-up 0.5s cubic-bezier(0.16,1,0.3,1) forwards' }}>aduce clienți,</span>
+        <span className="block text-orange" style={{ animation: 'hero-up 0.5s cubic-bezier(0.16,1,0.3,1) forwards' }}>
+          <TextScramble text="nu doar click-uri." isLcp={true} />
         </span>
       </h1>
 

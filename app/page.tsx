@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import ScrollReveal from '@/components/ui/ScrollReveal'
-import Counter from '@/components/ui/Counter'
-import FaqAccordion from '@/components/ui/FaqAccordion'
-import TabReEngagement from '@/components/ui/TabReEngagement'
-import ExitIntent from '@/components/ui/ExitIntent'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { localBusinessSchema, faqSchema } from '@/lib/schema'
 import HeroClient from '@/components/sections/HeroClient'
 import dynamic from 'next/dynamic'
 
+const ScrollReveal = dynamic(() => import('@/components/ui/ScrollReveal'))
+const Counter = dynamic(() => import('@/components/ui/Counter'))
+const FaqAccordion = dynamic(() => import('@/components/ui/FaqAccordion'))
+const TabReEngagement = dynamic(() => import('@/components/ui/TabReEngagement'))
+const ExitIntent = dynamic(() => import('@/components/ui/ExitIntent'))
 const HorizontalScroll = dynamic(() => import('@/components/sections/HorizontalScroll'))
 
 export const metadata: Metadata = {

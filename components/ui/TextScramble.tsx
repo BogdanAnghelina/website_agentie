@@ -7,17 +7,28 @@ interface Props {
   text: string
   className?: string
   trigger?: boolean
+  isLcp?: boolean
 }
 
-export default function TextScramble({ text, className, trigger = true }: Props) {
+export default function TextScramble({ text, className, trigger = true, isLcp = false }: Props) {
   const [display, setDisplay] = useState(text)
   const frameRef = useRef<number>(0)
+  const [hasMounted, setHasMounted] = useState(false)
 
   useEffect(() => {
-    if (!trigger) return
+    setHasMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!trigger || isLcp || !hasMounted) {
+      setDisplay(text)
+      return
+    }
+    
     let frame = 0
-    const totalFrames = 20
+    const totalFrames = 15 // Reduced from 20 for speed
     cancelAnimationFrame(frameRef.current)
+    
     function update() {
       const progress = frame / totalFrames
       setDisplay(
@@ -36,7 +47,7 @@ export default function TextScramble({ text, className, trigger = true }: Props)
     }
     update()
     return () => cancelAnimationFrame(frameRef.current)
-  }, [text, trigger])
+  }, [text, trigger, isLcp, hasMounted])
 
   return <span className={className}>{display}</span>
 }
