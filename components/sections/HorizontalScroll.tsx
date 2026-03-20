@@ -1,6 +1,12 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import Link from 'next/link'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 const services = [
   {
@@ -57,46 +63,33 @@ export default function HorizontalScroll() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    let gsap: typeof import('gsap').gsap | null = null
-    let ScrollTrigger: (typeof import('gsap/ScrollTrigger'))['ScrollTrigger'] | null = null
-    let ctx: { revert: () => void } | null = null
+  useIsomorphicLayoutEffect(() => {
+    const section = sectionRef.current
+    const track = trackRef.current
+    if (!section || !track) return
 
-    async function init() {
-      const { gsap: g } = await import('gsap')
-      const { ScrollTrigger: ST } = await import('gsap/ScrollTrigger')
-      g.registerPlugin(ST)
-      gsap = g
-      ScrollTrigger = ST
+    const totalWidth = track.scrollWidth - window.innerWidth
 
-      const section = sectionRef.current
-      const track = trackRef.current
-      if (!section || !track) return
-
-      const totalWidth = track.scrollWidth - window.innerWidth
-
-      ctx = gsap.context(() => {
-        gsap!.to(track, {
-          x: -totalWidth,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top top',
-            end: () => `+=${totalWidth}`,
-            pin: true,
-            scrub: 1,
-            anticipatePin: 1,
-          },
-        })
-      }, section)
-    }
-
-    init()
+    const ctx = gsap.context(() => {
+      gsap.to(track, {
+        x: -totalWidth,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: () => `+=${totalWidth}`,
+          pin: true,
+          scrub: 1,
+          anticipatePin: 1,
+        },
+      })
+    }, section)
 
     return () => {
-      ctx?.revert()
+      ctx.revert()
     }
   }, [])
+
 
   return (
     <div className="bg-charcoal">
