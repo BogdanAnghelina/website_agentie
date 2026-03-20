@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import FaqAccordion from '@/components/ui/FaqAccordion'
-import JsonLd from '@/components/seo/JsonLd'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { serviceSchema, faqSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {

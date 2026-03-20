@@ -6,9 +6,10 @@ interface Props {
   direction?: 'up' | 'left' | 'right' | 'scale' | 'fade'
   delay?: number
   className?: string
+  style?: React.CSSProperties
 }
 
-export default function ScrollReveal({ children, direction = 'up', delay = 0, className }: Props) {
+export default function ScrollReveal({ children, direction = 'up', delay = 0, className, style }: Props) {
   const shouldReduce = useReducedMotion()
 
   const variants = {
