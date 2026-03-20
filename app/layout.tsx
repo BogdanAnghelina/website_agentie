@@ -1,23 +1,23 @@
 import type { Metadata } from 'next'
-import { Plus_Jakarta_Sans, DM_Sans } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CustomCursor from '@/components/ui/CustomCursor'
 import DarkModeInit from '@/components/providers/DarkModeInit'
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+const plusJakarta = localFont({
+  src: '../public/fonts/PlusJakartaSans.woff2',
   variable: '--font-head',
   display: 'swap',
+  weight: '400 800', // Variable font weight range
 })
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+const dmSans = localFont({
+  src: '../public/fonts/DMSans.woff2',
   variable: '--font-body',
   display: 'swap',
+  weight: '300 600', // Variable font weight range
 })
 
 export const metadata: Metadata = {
