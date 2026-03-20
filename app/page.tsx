@@ -8,7 +8,9 @@ import ExitIntent from '@/components/ui/ExitIntent'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { localBusinessSchema, faqSchema } from '@/lib/schema'
 import HeroClient from '@/components/sections/HeroClient'
-import HorizontalScroll from '@/components/sections/HorizontalScroll'
+import dynamic from 'next/dynamic'
+
+const HorizontalScroll = dynamic(() => import('@/components/sections/HorizontalScroll'))
 
 export const metadata: Metadata = {
   title: 'Antigravity Digital — Agenție de Marketing',

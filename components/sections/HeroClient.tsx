@@ -25,16 +25,16 @@ export default function HeroClient() {
         className="font-head font-extrabold tracking-[-0.035em] text-[#F4F0E8] mb-6"
         style={{ fontSize: 'clamp(46px, 5vw, 82px)', lineHeight: 1.03 }}
       >
-        <span className="block" style={{ animation: 'hero-up 0.75s cubic-bezier(0.16,1,0.3,1) forwards 0.3s', opacity: 0 }}>Marketing care</span>
-        <span className="block" style={{ animation: 'hero-up 0.75s cubic-bezier(0.16,1,0.3,1) forwards 0.46s', opacity: 0 }}>aduce clienți,</span>
-        <span className="block text-orange" style={{ animation: 'hero-up 0.75s cubic-bezier(0.16,1,0.3,1) forwards 0.62s', opacity: 0 }}>
+        <span className="block" style={{ animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards' }}>Marketing care</span>
+        <span className="block" style={{ animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>aduce clienți,</span>
+        <span className="block text-orange" style={{ animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.25s', opacity: 0 }}>
           <TextScramble text="nu doar click-uri." />
         </span>
       </h1>
 
       <p
         className="font-body text-[17px] leading-[1.72] mb-10"
-        style={{ color: 'rgba(244,240,232,0.58)', maxWidth: 440, animation: 'hero-up 0.7s ease forwards 0.78s', opacity: 0 }}
+        style={{ color: 'rgba(244,240,232,0.58)', maxWidth: 440, animation: 'hero-up 0.6s ease forwards 0.4s', opacity: 0 }}
       >
         Creștem afaceri românești prin Google Ads, SEO și Web Development.
         Strategii construite pe date reale, rezultate pe care le poți măsura.
@@ -43,7 +43,7 @@ export default function HeroClient() {
       {/* CTA buttons */}
       <div
         className="flex items-center gap-3.5 mb-14 flex-wrap"
-        style={{ animation: 'hero-up 0.7s ease forwards 0.92s', opacity: 0 }}
+        style={{ animation: 'hero-up 0.6s ease forwards 0.5s', opacity: 0 }}
       >
         <MagneticButton
           href="/contact"
