@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px)', backgroundSize: '32px 32px' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 500, top: -100, right: -60, background: 'radial-gradient(circle, rgba(232,88,26,0.17) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 14s ease-in-out infinite' }} aria-hidden="true" />
 
-        <section className="relative z-10 mx-auto text-center" style={{ padding: '140px 56px 100px', maxWidth: 800 }} aria-label="Contact hero">
+        <section className="relative z-10 mx-auto text-center px-5 pt-28 pb-20 md:pt-36 md:pb-24" style={{ maxWidth: 800 }} aria-label="Contact hero">
           <div className="inline-flex items-center gap-2 rounded-full w-fit mb-8 text-[11.5px] font-medium tracking-[0.05em] uppercase mx-auto" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', padding: '5px 14px 5px 8px', color: 'rgba(244,240,232,0.58)', animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>
             <span className="w-[7px] h-[7px] bg-orange rounded-full flex-shrink-0" style={{ animation: 'pulse-ring 2.4s ease-in-out infinite' }} aria-hidden="true" />
             Consultație gratuită
@@ -35,9 +35,9 @@ export default function ContactPage() {
       </div>
 
       {/* MAIN CONTENT */}
-      <section style={{ background: '#FDFAF5', padding: '100px 56px' }} aria-label="Formular de contact">
+      <section className="px-5 py-16 md:px-14 md:py-24" style={{ background: '#FDFAF5' }} aria-label="Formular de contact">
         <div className="mx-auto" style={{ maxWidth: 1200 }}>
-          <div className="grid grid-cols-2 gap-[80px] items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[80px] items-start">
 
             {/* Contact Form */}
             <ScrollReveal>
@@ -146,7 +146,7 @@ export default function ContactPage() {
       </section>
 
       {/* SERVICES QUICK LINKS */}
-      <section style={{ background: '#F4F0E8', padding: '80px 56px' }} aria-label="Serviciile noastre">
+      <section className="px-5 py-12 md:px-14 md:py-20" style={{ background: '#F4F0E8' }} aria-label="Serviciile noastre">
         <div className="mx-auto" style={{ maxWidth: 1200 }}>
           <ScrollReveal>
             <div className="text-center mb-12">

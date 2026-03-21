@@ -85,7 +85,7 @@ export default function CaseStudiesPage() {
       </div>
 
       {/* CASE STUDIES */}
-      <section className="bg-cream py-24 px-14">
+      <section className="bg-cream py-16 px-5 md:py-24 md:px-14">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="flex flex-col gap-6">
             {cases.map((cs, i) => (
@@ -129,7 +129,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden text-center py-[110px] px-14" style={{ background: '#0E2050' }}>
+      <section className="relative overflow-hidden text-center py-20 px-5 md:py-[110px] md:px-14" style={{ background: '#0E2050' }}>
         <div className="absolute pointer-events-none" style={{ width: 600, height: 600, top: -200, left: '50%', transform: 'translateX(-50%)', borderRadius: '50%', filter: 'blur(120px)', background: 'radial-gradient(circle, rgba(232,88,26,.18) 0%, transparent 70%)' }} aria-hidden="true" />
         <div className="relative z-10 mx-auto" style={{ maxWidth: 640 }}>
           <ScrollReveal>

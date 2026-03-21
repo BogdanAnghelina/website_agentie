@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ConfidentialitatePage() {
   return (
-    <section className="bg-cream py-24 px-14">
+    <section className="bg-cream py-16 px-5 md:py-24 md:px-14">
       <div className="mx-auto prose prose-lg" style={{ maxWidth: 800 }}>
         <h1 className="font-head font-extrabold text-text-1 mb-6" style={{ fontSize: 'clamp(28px, 3vw, 42px)' }}>Politica de Confidențialitate</h1>
         <p className="text-text-3 text-sm mb-10">Ultima actualizare: Martie 2025</p>

@@ -84,7 +84,7 @@ export default function PricingPage() {
       </div>
 
       {/* PACKAGES */}
-      <section className="bg-cream py-24 px-14">
+      <section className="bg-cream py-16 px-5 md:py-24 md:px-14">
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {packages.map((pkg, i) => (
