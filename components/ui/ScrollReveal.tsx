@@ -1,5 +1,5 @@
 'use client'
-import { motion, useReducedMotion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 interface Props {
   children: React.ReactNode
@@ -9,34 +9,61 @@ interface Props {
   style?: React.CSSProperties
 }
 
+// Lightweight ScrollReveal using IntersectionObserver + CSS transitions.
+// Zero dependencies — replaces framer-motion to reduce JS bundle size.
 export default function ScrollReveal({ children, direction = 'up', delay = 0, className, style }: Props) {
-  const shouldReduce = useReducedMotion()
+  const ref = useRef<HTMLDivElement>(null)
 
-  const variants = {
-    hidden: shouldReduce ? { opacity: 0 } : {
-      opacity: 0,
-      y: direction === 'up' ? 32 : 0,
-      x: direction === 'left' ? -28 : direction === 'right' ? 28 : 0,
-      scale: direction === 'scale' ? 0.93 : 1,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      x: 0,
-      scale: 1,
-      transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay },
-    },
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    // Respect prefers-reduced-motion
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReduced) {
+      el.style.opacity = '1'
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.style.opacity = '1'
+          el.style.transform = 'translate(0, 0) scale(1)'
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1, rootMargin: '-60px' }
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  const getInitialTransform = () => {
+    switch (direction) {
+      case 'left': return 'translateX(-28px)'
+      case 'right': return 'translateX(28px)'
+      case 'scale': return 'scale(0.93)'
+      case 'fade': return 'translate(0, 0) scale(1)'
+      default: return 'translateY(32px)'
+    }
   }
 
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-60px' }}
-      variants={variants}
+    <div
+      ref={ref}
       className={className}
+      style={{
+        ...style,
+        opacity: 0,
+        transform: getInitialTransform(),
+        transition: `opacity 0.7s cubic-bezier(0.16,1,0.3,1) ${delay}s, transform 0.7s cubic-bezier(0.16,1,0.3,1) ${delay}s`,
+        willChange: 'opacity, transform',
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }

@@ -9,6 +9,7 @@ const plusJakarta = localFont({
   src: './fonts/PlusJakartaSans.woff2',
   variable: '--font-head',
   display: 'swap',
+  preload: true,
   weight: '400 800', // Variable font weight range
 })
 
@@ -16,8 +17,10 @@ const dmSans = localFont({
   src: './fonts/DMSans.woff2',
   variable: '--font-body',
   display: 'swap',
+  preload: true,
   weight: '300 600', // Variable font weight range
 })
+
 
 export const metadata: Metadata = {
   title: {
