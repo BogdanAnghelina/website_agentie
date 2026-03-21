@@ -101,7 +101,7 @@ export default function HorizontalScroll() {
       >
         {/* Section header */}
         <div
-          className="relative z-10 px-14 pt-20 pb-10"
+          className="relative z-10 px-5 pt-12 pb-6 md:px-14 md:pt-20 md:pb-10"
           style={{ maxWidth: 1300, margin: '0 auto' }}
         >
           <div className="inline-flex items-center gap-[7px] text-[11.5px] font-semibold tracking-[0.07em] uppercase mb-4" style={{ color: 'rgba(232,88,26,0.85)' }}>
@@ -122,7 +122,7 @@ export default function HorizontalScroll() {
         {/* Horizontal track */}
         <div
           ref={trackRef}
-          className="flex gap-5 px-14 pb-20"
+          className="flex gap-4 px-5 pb-12 md:gap-5 md:px-14 md:pb-20"
           style={{ width: 'max-content' }}
         >
           {services.map((svc) => (

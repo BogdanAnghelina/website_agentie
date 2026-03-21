@@ -42,7 +42,7 @@ export default function HeroClient() {
 
       {/* CTA buttons */}
       <div
-        className="flex items-center gap-3.5 mb-14 flex-wrap"
+        className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-14"
         style={{ animation: 'hero-up 0.6s ease forwards 0.5s', opacity: 0 }}
       >
         <MagneticButton

@@ -54,8 +54,8 @@ export default function DesignPage() {
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 500, top: -100, right: -60, background: 'radial-gradient(circle, rgba(232,88,26,0.17) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 14s ease-in-out infinite' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 360, height: 360, bottom: 40, left: -80, background: 'radial-gradient(circle, rgba(14,32,80,0.55) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 18s ease-in-out infinite reverse 3s' }} aria-hidden="true" />
 
-        <section className="relative z-10 flex items-center mx-auto gap-[60px]" style={{ minHeight: '100dvh', padding: '112px 56px 80px', maxWidth: 1300 }} aria-label="Design hero">
-          <div className="flex flex-col" style={{ flex: '0 0 52%' }}>
+        <section className="relative z-10 flex flex-col md:flex-row items-start md:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Design hero">
+          <div className="flex flex-col w-full md:w-auto" style={{ flex: '0 0 auto' }}>
             <div className="inline-flex items-center gap-2 rounded-full w-fit mb-8 text-[11.5px] font-medium tracking-[0.05em] uppercase" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', padding: '5px 14px 5px 8px', color: 'rgba(244,240,232,0.58)', animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>
               <span className="w-[7px] h-[7px] bg-orange rounded-full flex-shrink-0" style={{ animation: 'pulse-ring 2.4s ease-in-out infinite' }} aria-hidden="true" />
               Design &amp; Branding

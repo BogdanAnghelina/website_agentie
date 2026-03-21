@@ -49,8 +49,8 @@ export default function GoogleAdsPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px)', backgroundSize: '32px 32px' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 500, top: -100, right: -60, background: 'radial-gradient(circle, rgba(232,88,26,0.17) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 14s ease-in-out infinite' }} aria-hidden="true" />
 
-        <section className="relative z-10 flex items-center mx-auto gap-[60px]" style={{ minHeight: '100dvh', padding: '112px 56px 80px', maxWidth: 1300 }} aria-label="Google Ads hero">
-          <div className="flex flex-col" style={{ flex: '0 0 52%' }}>
+        <section className="relative z-10 flex flex-col md:flex-row items-start md:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Google Ads hero">
+          <div className="flex flex-col w-full md:w-auto" style={{ flex: '0 0 auto' }}>
             <div className="inline-flex items-center gap-2 rounded-full w-fit mb-8 text-[11.5px] font-medium tracking-[0.05em] uppercase" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', padding: '5px 14px 5px 8px', color: 'rgba(244,240,232,0.58)', animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>
               <span className="w-[7px] h-[7px] bg-orange rounded-full flex-shrink-0" style={{ animation: 'pulse-ring 2.4s ease-in-out infinite' }} aria-hidden="true" />
               Serviciu Principal · Google Ads
@@ -177,7 +177,7 @@ export default function GoogleAdsPage() {
       </div>
 
       {/* WHY GOOGLE ADS */}
-      <section className="bg-warm-white py-24 px-14">
+      <section className="bg-warm-white py-16 px-5 md:py-24 md:px-14">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="grid gap-20" style={{ gridTemplateColumns: '1fr 1.1fr', alignItems: 'start' }}>
             <div className="sticky top-[120px]">
@@ -218,7 +218,7 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* CAMPAIGN TYPES */}
-      <section className="bg-cream py-24 px-14">
+      <section className="bg-cream py-16 px-5 md:py-24 md:px-14">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="mb-13">
             <ScrollReveal>
@@ -283,7 +283,7 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* CASE STUDY */}
-      <section className="relative overflow-hidden py-24 px-14" style={{ background: '#171720' }}>
+      <section className="relative overflow-hidden py-16 px-5 md:py-24 md:px-14" style={{ background: '#171720' }}>
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '36px 36px' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 400, top: -100, right: -80, background: 'radial-gradient(circle, rgba(14,32,80,.5) 0%, transparent 70%)', filter: 'blur(100px)' }} aria-hidden="true" />
         <div className="relative z-10" style={{ maxWidth: 1200, margin: '0 auto' }}>
@@ -357,7 +357,7 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="bg-warm-white py-24 px-14" id="cum-lucram">
+      <section className="bg-warm-white py-16 px-5 md:py-24 md:px-14" id="cum-lucram">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ maxWidth: 560, marginBottom: 64 }}>
             <ScrollReveal>
@@ -398,7 +398,7 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-cream py-24 px-14">
+      <section className="bg-cream py-16 px-5 md:py-24 md:px-14">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="grid gap-20" style={{ gridTemplateColumns: '1fr 1.6fr', alignItems: 'start' }}>
             <div className="sticky top-[120px]">
@@ -424,7 +424,7 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden text-center py-[110px] px-14" style={{ background: '#0E2050' }}>
+      <section className="relative overflow-hidden text-center py-20 px-5 md:py-[110px] md:px-14" style={{ background: '#0E2050' }}>
         <div className="absolute pointer-events-none" style={{ width: 600, height: 600, top: -200, left: '50%', transform: 'translateX(-50%)', borderRadius: '50%', filter: 'blur(120px)', background: 'radial-gradient(circle, rgba(232,88,26,.18) 0%, transparent 70%)' }} aria-hidden="true" />
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '40px 40px' }} aria-hidden="true" />
         <div className="relative z-10 mx-auto" style={{ maxWidth: 720 }}>

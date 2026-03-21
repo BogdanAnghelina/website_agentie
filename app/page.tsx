@@ -75,11 +75,11 @@ export default function HomePage() {
         <div className="absolute rounded-full pointer-events-none" style={{ width: 400, height: 400, bottom: 0, left: -80, background: 'radial-gradient(circle, rgba(14,32,80,0.6) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 18s ease-in-out infinite reverse 3s' }} aria-hidden="true" />
 
         <section
-          className="relative z-10 flex items-center mx-auto gap-[60px]"
-          style={{ minHeight: '100dvh', padding: '112px 56px 64px', maxWidth: 1300 }}
+          className="relative z-10 flex flex-col md:flex-row items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-16"
+          style={{ minHeight: '100dvh', maxWidth: 1300 }}
           aria-label="Hero"
         >
-          <div className="flex flex-col" style={{ flex: '0 0 54%' }}>
+          <div className="flex flex-col w-full md:w-auto" style={{ flex: '0 0 auto' }}>
             <div
               className="inline-flex items-center gap-2 rounded-full w-fit mb-8 text-[11.5px] font-medium tracking-[0.05em] uppercase"
               style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', padding: '5px 14px 5px 8px', color: 'rgba(244,240,232,0.58)', animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}
@@ -112,9 +112,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right visual */}
+          {/* Right visual — hidden on mobile */}
           <div
-            className="flex-1 flex items-center justify-center relative"
+            className="hidden md:flex flex-1 items-center justify-center relative"
             style={{ height: 490, animation: 'hero-fade 1s ease forwards 0.38s', opacity: 0 }}
             aria-hidden="true"
           >
@@ -190,7 +190,7 @@ export default function HomePage() {
       </div>
 
       {/* SERVICES */}
-      <section className="bg-cream py-24 px-14" id="servicii">
+      <section className="bg-cream py-16 px-5 md:py-24 md:px-14" id="servicii">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="flex items-end justify-between mb-12 gap-10 flex-wrap">
             <div style={{ maxWidth: 540 }}>
@@ -271,7 +271,7 @@ export default function HomePage() {
       </section>
 
       {/* STATS */}
-      <section className="relative overflow-hidden py-24 px-14" style={{ background: '#171720' }}>
+      <section className="relative overflow-hidden py-16 px-5 md:py-24 md:px-14" style={{ background: '#171720' }}>
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '36px 36px' }} aria-hidden="true" />
         <div className="relative z-10" style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ maxWidth: 600, marginBottom: 72 }}>
@@ -300,7 +300,7 @@ export default function HomePage() {
                 { prefix: '€', target: 3, suffix: '.2M', label: 'Bugete gestionate', desc: 'în ultimele 12 luni' },
                 { prefix: '', target: 6, suffix: ' ani', label: 'Pe piața digitală', desc: 'cu experiență dovedită' },
               ].map((stat, i) => (
-                <div key={i} className="flex flex-col" style={{ background: '#1F1E2A', padding: '44px 36px' }}>
+                <div key={i} className="flex flex-col py-8 px-6 md:py-[44px] md:px-[36px]" style={{ background: '#1F1E2A' }}>
                   <div className="font-head font-extrabold tracking-[-0.04em] text-[#F4F0E8] leading-none mb-2" style={{ fontSize: 'clamp(40px, 4vw, 64px)' }}>
                     {stat.prefix && <span className="text-orange">{stat.prefix}</span>}
                     <Counter target={stat.target} />
@@ -319,7 +319,7 @@ export default function HomePage() {
       <HorizontalScroll />
 
       {/* PROCESS */}
-      <section className="bg-warm-white py-24 px-14" id="proces">
+      <section className="bg-warm-white py-16 px-5 md:py-24 md:px-14" id="proces">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="text-center" style={{ maxWidth: 560, margin: '0 auto 72px' }}>
             <ScrollReveal>
@@ -339,7 +339,7 @@ export default function HomePage() {
               </p>
             </ScrollReveal>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { num: '01', title: 'Audit & Strategie', desc: 'Analizăm afacerea ta, competitorii și prezența digitală actuală. Identificăm oportunitățile cu cel mai mare potențial.' },
               { num: '02', title: 'Planificare & Setup', desc: 'Construim strategia și setăm toate canalele: conturi, pixel, tracking, audiențe și structura campaniei.' },
@@ -359,7 +359,7 @@ export default function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-cream py-24 px-14" id="recenzii">
+      <section className="bg-cream py-16 px-5 md:py-24 md:px-14" id="recenzii">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ maxWidth: 580, marginBottom: 56 }}>
             <ScrollReveal>
@@ -374,7 +374,7 @@ export default function HomePage() {
               </h2>
             </ScrollReveal>
           </div>
-          <div className="grid gap-4" style={{ gridTemplateColumns: '1.5fr 1fr' }}>
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-4">
             <ScrollReveal delay={0.05}>
               <div className="bg-warm-white rounded-[22px] p-8 flex flex-col gap-5 transition-all hover:-translate-y-0.5" style={{ border: '1px solid rgba(23,23,32,0.09)' }}>
                 <div className="flex gap-1">{[...Array(5)].map((_, i) => <StarIcon key={i} />)}</div>
@@ -421,14 +421,14 @@ export default function HomePage() {
       </section>
 
       {/* TOOLS */}
-      <section className="relative py-[72px] px-14" style={{ background: '#1F1E2A', borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+      <section className="relative py-12 px-5 md:py-[72px] md:px-14" style={{ background: '#1F1E2A', borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="flex items-center justify-between gap-8 mb-11 flex-wrap">
             <div>
               <div className="text-[12px] font-semibold tracking-[0.06em] uppercase mb-2" style={{ color: 'rgba(244,240,232,0.30)' }}>Stack profesional</div>
               <div className="font-head text-[18px] font-bold text-[#F4F0E8] tracking-[-0.01em]">Instrumentele pe care le folosim zilnic</div>
             </div>
-            <p className="text-[14px] text-right leading-[1.6]" style={{ color: 'rgba(244,240,232,0.30)', maxWidth: 360 }}>
+            <p className="text-[14px] text-left md:text-right leading-[1.6]" style={{ color: 'rgba(244,240,232,0.30)', maxWidth: 360 }}>
               Certificări Google, Meta și HubSpot. Acces premium la SEMrush, Ahrefs și suite-ul Google Marketing Platform.
             </p>
           </div>
@@ -448,10 +448,10 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-cream py-24 px-14">
+      <section className="bg-cream py-16 px-5 md:py-24 md:px-14">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div className="grid gap-20" style={{ gridTemplateColumns: '1fr 1.6fr', alignItems: 'start' }}>
-            <div className="sticky top-[120px]">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-12 md:gap-20" style={{ alignItems: 'start' }}>
+            <div className="md:sticky md:top-[120px]">
               <ScrollReveal direction="left">
                 <div className="inline-flex items-center gap-[7px] text-[11.5px] font-semibold tracking-[0.07em] uppercase text-orange mb-4">
                   <span className="block w-5 h-0.5 bg-orange rounded-sm" />
@@ -479,7 +479,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden text-center py-[110px] px-14" style={{ background: '#0E2050' }} id="contact">
+      <section className="relative overflow-hidden text-center py-20 px-5 md:py-[110px] md:px-14" style={{ background: '#0E2050' }} id="contact">
         <div className="absolute pointer-events-none" style={{ width: 600, height: 600, top: -200, left: '50%', transform: 'translateX(-50%)', borderRadius: '50%', filter: 'blur(120px)', background: 'radial-gradient(circle, rgba(232,88,26,.18) 0%, transparent 70%)' }} aria-hidden="true" />
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '40px 40px' }} aria-hidden="true" />
         <div className="relative z-10 mx-auto" style={{ maxWidth: 720 }}>
