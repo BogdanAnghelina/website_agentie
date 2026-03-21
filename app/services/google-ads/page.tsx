@@ -49,7 +49,7 @@ export default function GoogleAdsPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px)', backgroundSize: '32px 32px' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 500, top: -100, right: -60, background: 'radial-gradient(circle, rgba(232,88,26,0.17) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 14s ease-in-out infinite' }} aria-hidden="true" />
 
-        <section className="relative z-10 flex flex-col md:flex-row items-start md:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Google Ads hero">
+        <section className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Google Ads hero">
           <div className="flex flex-col w-full md:w-auto" style={{ flex: '0 0 auto' }}>
             <div className="inline-flex items-center gap-2 rounded-full w-fit mb-8 text-[11.5px] font-medium tracking-[0.05em] uppercase" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', padding: '5px 14px 5px 8px', color: 'rgba(244,240,232,0.58)', animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>
               <span className="w-[7px] h-[7px] bg-orange rounded-full flex-shrink-0" style={{ animation: 'pulse-ring 2.4s ease-in-out infinite' }} aria-hidden="true" />
@@ -92,7 +92,7 @@ export default function GoogleAdsPage() {
           </div>
 
           {/* Right visual — search mockup */}
-          <div className="hidden md:flex flex-1 items-center justify-center relative" style={{ height: 500, animation: 'hero-fade 1s ease forwards 0.4s', opacity: 0 }} aria-hidden="true">
+          <div className="hidden lg:flex flex-1 items-center justify-center relative" style={{ height: 500, animation: 'hero-fade 1s ease forwards 0.4s', opacity: 0 }} aria-hidden="true">
             {/* Mini card A */}
             <div className="absolute rounded-[18px] z-[3]" style={{ top: 28, left: -60, background: 'rgba(15,15,25,0.85)', backdropFilter: 'blur(18px)', border: '1px solid rgba(255,255,255,0.1)', padding: '14px 16px', boxShadow: '0 20px 40px rgba(0,0,0,.35)', animation: 'mini-a 7.5s ease-in-out infinite', willChange: 'transform' }}>
               <div className="text-[9.5px] font-medium tracking-[0.05em] uppercase mb-1" style={{ color: 'rgba(244,240,232,0.30)' }}>Quality Score</div>
@@ -104,7 +104,7 @@ export default function GoogleAdsPage() {
             </div>
 
             {/* Search card */}
-            <div className="relative z-[2] rounded-[24px]" style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(24px)', border: '1px solid rgba(255,255,255,0.1)', padding: 22, width: 340, boxShadow: '0 40px 80px rgba(0,0,0,0.4)', animation: 'card-float 6.5s ease-in-out infinite', willChange: 'transform' }}>
+            <div className="relative z-[2] rounded-[24px]" style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(24px)', border: '1px solid rgba(255,255,255,0.1)', padding: 22, width: '100%', maxWidth: 340, boxShadow: '0 40px 80px rgba(0,0,0,0.4)', animation: 'card-float 6.5s ease-in-out infinite', willChange: 'transform' }}>
               {/* Search bar */}
               <div className="flex items-center gap-2.5 rounded-full mb-[18px]" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', padding: '9px 16px' }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(244,240,232,0.30)" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -301,7 +301,7 @@ export default function GoogleAdsPage() {
             </ScrollReveal>
           </div>
 
-          <div className="grid gap-[72px] items-center" style={{ gridTemplateColumns: '1fr 1.2fr' }}>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-8 md:gap-[72px] items-start md:items-center">
             <ScrollReveal direction="left">
               <div>
                 <p className="font-head font-bold tracking-[-0.02em] text-[#F4F0E8] leading-[1.35] mb-7 italic" style={{ fontSize: 'clamp(18px, 2vw, 26px)' }}>

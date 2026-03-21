@@ -31,8 +31,8 @@ export default function SeoPage() {
         <div style={{ position: 'absolute', width: 500, height: 500, top: -100, right: -60, borderRadius: '50%', filter: 'blur(100px)', background: 'radial-gradient(circle, rgba(16,185,129,0.13) 0%, transparent 70%)', animation: 'blob-drift 14s ease-in-out infinite' }} />
         <div style={{ position: 'absolute', width: 360, height: 360, bottom: 40, left: -80, borderRadius: '50%', filter: 'blur(100px)', background: 'radial-gradient(circle, rgba(14,32,80,0.55) 0%, transparent 70%)', animation: 'blob-drift 18s ease-in-out infinite reverse 3s' }} />
 
-        <div style={{ position: 'relative', zIndex: 1, minHeight: '100dvh', display: 'flex', alignItems: 'center', padding: '112px 56px 80px', maxWidth: 1300, margin: '0 auto', gap: 60 }} className="hero-layout">
-          <div style={{ flex: '0 0 52%', display: 'flex', flexDirection: 'column' }}>
+        <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }}>
+          <div className="flex flex-col w-full md:w-auto" style={{ flex: '0 0 auto' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 100, padding: '5px 14px 5px 8px', fontSize: 11.5, fontWeight: 500, color: 'rgba(244,240,232,0.58)', letterSpacing: '0.05em', textTransform: 'uppercase', width: 'fit-content', marginBottom: 32, animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>
               <span style={{ width: 7, height: 7, background: '#10b981', borderRadius: '50%', flexShrink: 0, animation: 'pulse-ring 2.4s ease-in-out infinite' }} />
               Serviciu Principal · SEO
@@ -45,7 +45,7 @@ export default function SeoPage() {
             <p style={{ fontSize: 17, fontWeight: 400, color: 'rgba(244,240,232,0.58)', lineHeight: 1.72, maxWidth: 440, marginBottom: 40, opacity: 0, animation: 'hero-up 0.7s ease forwards 0.78s' }}>
               Optimizare pentru motoarele de căutare care construiește vizibilitate organică durabilă. Trafic calificat, fără să plătești per click — cu fiecare lună mai mult.
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 52, opacity: 0, animation: 'hero-up 0.7s ease forwards 0.92s' }}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-[52px]" style={{ opacity: 0, animation: 'hero-up 0.7s ease forwards 0.92s' }}>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#E8581A', color: '#1c0800', fontSize: 14.5, fontWeight: 600, padding: '13px 26px', borderRadius: 100, textDecoration: 'none' }}>
                 Audit SEO gratuit
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8"><line x1="2" y1="14" x2="14" y2="2"/><polyline points="4,2 14,2 14,12"/></svg>
@@ -54,7 +54,7 @@ export default function SeoPage() {
                 Cum lucrăm
               </a>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 28, opacity: 0, animation: 'hero-up 0.7s ease forwards 1.06s' }}>
+            <div className="flex flex-wrap items-center gap-5 md:gap-7" style={{ opacity: 0, animation: 'hero-up 0.7s ease forwards 1.06s' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                 <span style={{ fontFamily: 'var(--font-head)', fontSize: 26, fontWeight: 800, color: '#F4F0E8', letterSpacing: '-0.03em' }}>+<span style={{ color: '#10b981' }}>318</span>%</span>
                 <span style={{ fontSize: 11, color: 'rgba(244,240,232,0.3)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Trafic organic mediu</span>
@@ -73,7 +73,7 @@ export default function SeoPage() {
           </div>
 
           {/* Hero Visual - SEO Rankings Card */}
-          <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', height: 500, opacity: 0, animation: 'hero-fade 1s ease forwards 0.4s' }}>
+          <div className="hidden lg:flex flex-1 items-center justify-center relative" style={{ height: 500, opacity: 0, animation: 'hero-fade 1s ease forwards 0.4s' }}>
             <div style={{ position: 'absolute', top: 28, left: -60, background: 'rgba(15,15,25,0.85)', backdropFilter: 'blur(18px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 18, padding: '14px 16px', zIndex: 3, animation: 'mini-a 7.5s ease-in-out infinite' }}>
               <div style={{ fontSize: 9.5, fontWeight: 500, color: 'rgba(244,240,232,0.3)', letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: 3 }}>Domain Authority</div>
               <div style={{ fontFamily: 'var(--font-head)', fontSize: 22, fontWeight: 800, color: '#F4F0E8', letterSpacing: '-0.03em' }}>47</div>
@@ -124,7 +124,7 @@ export default function SeoPage() {
           </div>
 
           {/* Breadcrumb */}
-          <div style={{ position: 'absolute', bottom: 32, left: 56, display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'rgba(244,240,232,0.3)', zIndex: 2 }}>
+          <div className="absolute bottom-8 left-5 md:left-14 flex items-center gap-2 text-[13px] z-[2]" style={{ color: 'rgba(244,240,232,0.3)' }}>
             <Link href="/" style={{ color: 'rgba(244,240,232,0.3)', textDecoration: 'none' }}>Acasă</Link>
             <span style={{ opacity: 0.4 }}>›</span>
             <Link href="/#servicii" style={{ color: 'rgba(244,240,232,0.3)', textDecoration: 'none' }}>Servicii</Link>
@@ -142,10 +142,10 @@ export default function SeoPage() {
       </div>
 
       {/* WHY SEO */}
-      <section style={{ background: '#FDFBF7', padding: '96px 56px' }}>
+      <section className="py-16 px-5 md:py-24 md:px-14" style={{ background: '#FDFBF7' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] gap-8 md:gap-80" style={{ alignItems: 'start' }}>
-            <ScrollReveal direction="left" style={{ position: 'sticky', top: 120 }}>
+            <ScrollReveal direction="left" style={{ }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 11.5, fontWeight: 600, letterSpacing: '0.07em', textTransform: 'uppercase' as const, color: '#E8581A', marginBottom: 16 }}>
                 <span style={{ display: 'block', width: 20, height: 2, background: '#E8581A', borderRadius: 2 }} />
                 De ce SEO
@@ -181,7 +181,7 @@ export default function SeoPage() {
       </section>
 
       {/* SERVICE TYPES */}
-      <section style={{ background: '#F5F1E8', padding: '96px 56px' }} id="servicii">
+      <section className="py-16 px-5 md:py-24 md:px-14" id="servicii" style={{ background: '#F5F1E8' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ marginBottom: 52 }}>
             <ScrollReveal direction="up">
@@ -198,13 +198,13 @@ export default function SeoPage() {
             </ScrollReveal>
           </div>
 
-          <div style={{ display: 'flex', gap: 14, marginBottom: 14, flexWrap: 'wrap' }}>
+          <div className="flex flex-col md:flex-row gap-4 mb-4">
             {[
               { tag: 'Fundație', name: 'SEO On-Page', desc: 'Optimizarea elementelor de pe site pentru relevanță maximă. Title tags, meta descriptions, structură heading, optimizare imagini, internal linking strategic. Baza oricărei strategii SEO serioase.', pills: ['Title tags', 'Meta', 'H1-H6', 'Schema markup', 'Imagini'], feat: true, flex: '44%' },
               { tag: '', name: 'SEO Tehnic', desc: 'Asigurăm că site-ul tău poate fi crawlat și indexat corect de Google. Viteza de încărcare, structura URL, sitemap, robots.txt, Core Web Vitals. Fără o bază tehnică solidă, orice altceva e inutil.', pills: ['Core Web Vitals', 'Crawlability', 'Indexare', 'PageSpeed'], feat: false, flex: '32%' },
               { tag: '', name: 'Cercetare Cuvinte Cheie', desc: 'Identificăm exact ce caută clienții tăi și cu ce intenție. Volumul de căutare, dificultatea, oportunitatea. Construim harta cuvintelor cheie care ghidează întreaga strategie.', pills: ['Volum', 'Intenție', 'Gap analysis'], feat: false, flex: '1' },
             ].map((card) => (
-              <ScrollReveal key={card.name} direction="up" style={{ flex: card.flex }}>
+              <ScrollReveal key={card.name} direction="up" className="w-full md:flex-1">
                 <div style={{ background: '#FDFBF7', border: '1px solid rgba(23,23,32,0.09)', borderRadius: 22, padding: '30px 28px', display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
                   {card.tag && <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' as const, color: '#E8581A', marginBottom: 8 }}>{card.tag}</div>}
                   <div style={{ fontFamily: 'var(--font-head)', fontSize: 18, fontWeight: 700, color: '#171720', letterSpacing: '-0.02em', marginBottom: 10 }}>{card.name}</div>
@@ -219,12 +219,12 @@ export default function SeoPage() {
             ))}
           </div>
 
-          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+          <div className="flex flex-col md:flex-row gap-4">
             {[
               { tag: 'Impact maxim', name: 'Link Building', desc: 'Obținerea de backlink-uri de calitate de pe site-uri cu autoritate ridicată. Cel mai dificil și cel mai valoros aspect al SEO. Fiecare link relevant e un vot de încredere în fața Google.', pills: ['Guest posting', 'Outreach', 'PR digital', 'Nișă relevantă'], feat: true, flex: '38%' },
               { tag: '', name: 'Content SEO', desc: 'Creăm și optimizăm conținut care răspunde la exact ceea ce caută audiența ta. Articole, pagini de servicii, studii de caz — toate optimizate pentru a ranka și a converti.', pills: ['Blogging', 'Pagini servicii', 'Ghiduri', 'FAQs'], feat: false, flex: '1' },
             ].map((card) => (
-              <ScrollReveal key={card.name} direction="up" style={{ flex: card.flex }}>
+              <ScrollReveal key={card.name} direction="up" className="w-full md:flex-1">
                 <div style={{ background: '#FDFBF7', border: '1px solid rgba(23,23,32,0.09)', borderRadius: 22, padding: '30px 28px', display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
                   {card.tag && <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' as const, color: '#E8581A', marginBottom: 8 }}>{card.tag}</div>}
                   <div style={{ fontFamily: 'var(--font-head)', fontSize: 18, fontWeight: 700, color: '#171720', letterSpacing: '-0.02em', marginBottom: 10 }}>{card.name}</div>
@@ -242,7 +242,7 @@ export default function SeoPage() {
       </section>
 
       {/* CASE STUDY */}
-      <section style={{ background: '#171720', padding: '96px 56px', position: 'relative', overflow: 'hidden' }}>
+      <section className="py-16 px-5 md:py-24 md:px-14 relative overflow-hidden" style={{ background: '#171720' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '36px 36px', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', borderRadius: '50%', filter: 'blur(100px)', pointerEvents: 'none', width: 500, height: 400, top: -100, right: -80, background: 'radial-gradient(circle, rgba(16,185,129,.18) 0%, transparent 70%)' }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
@@ -311,7 +311,7 @@ export default function SeoPage() {
       </section>
 
       {/* PROCESS */}
-      <section style={{ background: '#FDFBF7', padding: '96px 56px' }} id="cum-lucram">
+      <section className="py-16 px-5 md:py-24 md:px-14" style={{ background: '#FDFBF7' }} id="cum-lucram">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ maxWidth: 560, marginBottom: 64 }}>
             <ScrollReveal direction="up">
@@ -353,10 +353,10 @@ export default function SeoPage() {
       </section>
 
       {/* FAQ */}
-      <section style={{ background: '#F5F1E8', padding: '96px 56px' }}>
+      <section className="py-16 px-5 md:py-24 md:px-14" style={{ background: '#F5F1E8' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 md:gap-80" style={{ alignItems: 'start' }}>
-            <ScrollReveal direction="left" style={{ position: 'sticky', top: 120 }}>
+            <ScrollReveal direction="left" style={{ }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 11.5, fontWeight: 600, letterSpacing: '0.07em', textTransform: 'uppercase' as const, color: '#E8581A', marginBottom: 16 }}>
                 <span style={{ display: 'block', width: 20, height: 2, background: '#E8581A', borderRadius: 2 }} />
                 Întrebări frecvente
@@ -379,7 +379,7 @@ export default function SeoPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: '#0E2050', padding: '110px 56px', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+      <section className="py-20 px-5 md:py-[110px] md:px-14 relative overflow-hidden text-center" style={{ background: '#0E2050' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', width: 600, height: 600, top: -200, left: '50%', transform: 'translateX(-50%)', borderRadius: '50%', filter: 'blur(120px)', pointerEvents: 'none', background: 'radial-gradient(circle, rgba(16,185,129,.14) 0%, transparent 70%)' }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 720, margin: '0 auto' }}>

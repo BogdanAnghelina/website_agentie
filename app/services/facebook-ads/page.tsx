@@ -53,7 +53,7 @@ export default function FacebookAdsPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px)', backgroundSize: '32px 32px' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 500, top: -100, right: -60, background: 'radial-gradient(circle, rgba(232,88,26,0.17) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 14s ease-in-out infinite' }} aria-hidden="true" />
 
-        <section className="relative z-10 flex flex-col md:flex-row items-start md:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Facebook Ads hero">
+        <section className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Facebook Ads hero">
           <div className="flex flex-col w-full md:w-auto" style={{ flex: '0 0 auto' }}>
             <div className="inline-flex items-center gap-2 rounded-full w-fit mb-8 text-[11.5px] font-medium tracking-[0.05em] uppercase" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', padding: '5px 14px 5px 8px', color: 'rgba(244,240,232,0.58)', animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>
               <span className="w-[7px] h-[7px] bg-orange rounded-full flex-shrink-0" style={{ animation: 'pulse-ring 2.4s ease-in-out infinite' }} aria-hidden="true" />
@@ -93,8 +93,8 @@ export default function FacebookAdsPage() {
           </div>
 
           {/* FB Ad Preview Card */}
-          <div className="hidden md:flex flex-1 items-center justify-center relative" style={{ animation: 'hero-fade 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s', opacity: 0 }}>
-            <div className="relative rounded-2xl overflow-hidden" style={{ width: 340, background: '#fff', boxShadow: '0 32px 80px rgba(0,0,0,0.45)', border: '1px solid rgba(255,255,255,0.08)' }}>
+          <div className="hidden lg:flex flex-1 items-center justify-center relative" style={{ animation: 'hero-fade 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s', opacity: 0 }}>
+            <div className="relative rounded-2xl overflow-hidden" style={{ width: '100%', maxWidth: 340, background: '#fff', boxShadow: '0 32px 80px rgba(0,0,0,0.45)', border: '1px solid rgba(255,255,255,0.08)' }}>
               {/* Ad Header */}
               <div className="flex items-center gap-3 p-4" style={{ borderBottom: '1px solid #f0f0f0' }}>
                 <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style={{ background: 'linear-gradient(135deg, #E8581A, #1877F2)' }}>AG</div>
@@ -150,8 +150,8 @@ export default function FacebookAdsPage() {
       {/* WHY META ADS */}
       <section style={{ background: '#FDFAF5', padding: '100px 56px' }} aria-label="De ce Meta Ads">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
-          <div className="flex gap-[80px]">
-            <div style={{ flex: '0 0 340px' }} className="sticky top-24 self-start">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-[80px]">
+            <div className="hidden md:block sticky top-24 self-start" style={{ flex: '0 0 340px' }}>
               <ScrollReveal>
                 <p className="font-semibold text-orange text-sm tracking-[0.08em] uppercase mb-3">De ce Meta Ads</p>
                 <h2 className="font-head font-extrabold tracking-tight text-charcoal mb-6" style={{ fontSize: 'clamp(32px, 3vw, 48px)', lineHeight: 1.1 }}>
@@ -162,7 +162,7 @@ export default function FacebookAdsPage() {
                 </p>
               </ScrollReveal>
             </div>
-            <div className="flex-1 grid grid-cols-2 gap-6">
+            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 {
                   icon: '👥',
@@ -246,7 +246,7 @@ export default function FacebookAdsPage() {
               },
             ].map(format => (
               <ScrollReveal key={format.title}>
-                <div className="rounded-2xl p-7" style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 2px 16px rgba(0,0,0,0.04)', width: 340, minHeight: 190 }}>
+                <div className="rounded-2xl p-7" style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 2px 16px rgba(0,0,0,0.04)', width: '100%', maxWidth: 340, minHeight: 190 }}>
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="font-head font-bold text-charcoal" style={{ fontSize: 17 }}>{format.title}</h3>
                     <span className="text-[11px] font-semibold rounded-full px-3 py-1 ml-3 flex-shrink-0" style={{ background: '#FFF0E8', color: '#E8581A', border: '1px solid rgba(232,88,26,0.2)' }}>{format.tag}</span>
@@ -270,7 +270,7 @@ export default function FacebookAdsPage() {
               </h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
             <ScrollReveal>
               <div className="rounded-2xl p-8" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
                 <table className="w-full">
@@ -310,7 +310,7 @@ export default function FacebookAdsPage() {
                 <blockquote className="italic" style={{ color: 'rgba(244,240,232,0.8)', fontSize: 18, lineHeight: 1.7, borderLeft: '3px solid #E8581A', paddingLeft: 20 }}>
                   "Am avut senzația că aruncăm bani pe Facebook fără rezultat. Antigravity a restructurat totul — de la audiențe la creative — și în 3 luni ne-am triplat vânzările din Meta."
                 </blockquote>
-                <div className="mt-8 grid grid-cols-2 gap-4">
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     { val: '+480%', lbl: 'vânzări / lună' },
                     { val: '×20', lbl: 'reach față de înainte' },
@@ -330,8 +330,8 @@ export default function FacebookAdsPage() {
       {/* AUDIENCE TARGETING */}
       <section style={{ background: '#FDFAF5', padding: '100px 56px' }} aria-label="Targetare audiență">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
-          <div className="flex gap-[80px] items-center">
-            <ScrollReveal style={{ flex: '0 0 48%' }}>
+          <div className="flex flex-col md:flex-row gap-8 md:gap-[80px] items-start md:items-center">
+            <ScrollReveal className="w-full md:w-[48%] md:flex-none">
               <div>
                 <p className="font-semibold text-orange text-sm tracking-[0.08em] uppercase mb-3">Targetare</p>
                 <h2 className="font-head font-extrabold tracking-tight text-charcoal mb-6" style={{ fontSize: 'clamp(28px, 2.5vw, 42px)', lineHeight: 1.1 }}>
@@ -358,7 +358,7 @@ export default function FacebookAdsPage() {
                 </ul>
               </div>
             </ScrollReveal>
-            <ScrollReveal className="flex-1">
+            <ScrollReveal className="w-full md:flex-1">
               <div className="rounded-2xl p-6" style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 8px 40px rgba(0,0,0,0.06)' }}>
                 <div className="text-sm font-semibold mb-4" style={{ color: '#65676B' }}>Estimare audiență — Femei 25–44, București, Interes: Fashion</div>
                 <div className="rounded-xl p-5 mb-4" style={{ background: '#f0f2f5' }}>
@@ -404,7 +404,7 @@ export default function FacebookAdsPage() {
               </h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { num: '01', title: 'Audit & Audiență', desc: 'Analizăm contul existent (sau pornim de la zero), definim personas, audiențele sursă și obiectivele de conversie.', tag: 'Săptămâna 1' },
               { num: '02', title: 'Creative Development', desc: 'Producem sau optimizăm imaginile și video-urile. Scriem copy-ul cu hook, body și CTA testate. Configurăm pixel + CAPI.', tag: 'Săptămânile 1–2' },
@@ -427,8 +427,8 @@ export default function FacebookAdsPage() {
       {/* FAQ */}
       <section style={{ background: '#F4F0E8', padding: '100px 56px' }} aria-label="Întrebări frecvente">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
-          <div className="flex gap-[80px]">
-            <div style={{ flex: '0 0 340px' }} className="sticky top-24 self-start">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-[80px]">
+            <div className="hidden md:block sticky top-24 self-start" style={{ flex: '0 0 340px' }}>
               <ScrollReveal>
                 <p className="font-semibold text-orange text-sm tracking-[0.08em] uppercase mb-3">FAQ</p>
                 <h2 className="font-head font-extrabold tracking-tight text-charcoal mb-4" style={{ fontSize: 'clamp(28px, 2.5vw, 40px)', lineHeight: 1.1 }}>

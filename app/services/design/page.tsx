@@ -54,7 +54,7 @@ export default function DesignPage() {
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 500, top: -100, right: -60, background: 'radial-gradient(circle, rgba(232,88,26,0.17) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 14s ease-in-out infinite' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 360, height: 360, bottom: 40, left: -80, background: 'radial-gradient(circle, rgba(14,32,80,0.55) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 18s ease-in-out infinite reverse 3s' }} aria-hidden="true" />
 
-        <section className="relative z-10 flex flex-col md:flex-row items-start md:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Design hero">
+        <section className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Design hero">
           <div className="flex flex-col w-full md:w-auto" style={{ flex: '0 0 auto' }}>
             <div className="inline-flex items-center gap-2 rounded-full w-fit mb-8 text-[11.5px] font-medium tracking-[0.05em] uppercase" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', padding: '5px 14px 5px 8px', color: 'rgba(244,240,232,0.58)', animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>
               <span className="w-[7px] h-[7px] bg-orange rounded-full flex-shrink-0" style={{ animation: 'pulse-ring 2.4s ease-in-out infinite' }} aria-hidden="true" />
@@ -95,7 +95,7 @@ export default function DesignPage() {
           </div>
 
           {/* Brand System Card */}
-          <div className="hidden md:flex flex-1 items-center justify-center relative" style={{ animation: 'hero-fade 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s', opacity: 0, height: 500 }}>
+          <div className="hidden lg:flex flex-1 items-center justify-center relative" style={{ animation: 'hero-fade 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s', opacity: 0, height: 500 }}>
             {/* Mini card: Livrare */}
             <div className="absolute flex flex-col gap-1 text-white rounded-[18px] px-4 py-3" style={{ top: 28, left: -60, background: 'rgba(15,15,25,0.85)', backdropFilter: 'blur(18px)', border: '1px solid rgba(255,255,255,0.1)', animation: 'mini-a 7.5s ease-in-out infinite', zIndex: 3 }}>
               <div className="text-[9.5px] font-medium uppercase tracking-wide" style={{ color: 'rgba(244,240,232,0.45)' }}>Livrare</div>
@@ -107,7 +107,7 @@ export default function DesignPage() {
             </div>
 
             {/* Brand Card */}
-            <div className="relative rounded-3xl p-6" style={{ width: 340, background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(24px)', border: '1px solid rgba(255,255,255,0.12)', boxShadow: '0 40px 80px rgba(0,0,0,0.4)', animation: 'card-float 6.5s ease-in-out infinite', zIndex: 2 }}>
+            <div className="relative rounded-3xl p-6" style={{ width: '100%', maxWidth: 340, background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(24px)', border: '1px solid rgba(255,255,255,0.12)', boxShadow: '0 40px 80px rgba(0,0,0,0.4)', animation: 'card-float 6.5s ease-in-out infinite', zIndex: 2 }}>
               {/* Header */}
               <div className="flex items-center gap-3 mb-5 pb-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
                 <div className="w-8 h-8 rounded-[9px] flex items-center justify-center" style={{ background: 'rgba(232,88,26,0.1)', border: '1px solid rgba(232,88,26,0.25)', color: '#E8581A' }}>
@@ -178,8 +178,8 @@ export default function DesignPage() {
       {/* WHY DESIGN */}
       <section id="de-ce" style={{ background: '#FDFAF5', padding: '100px 56px' }} aria-label="De ce contează designul">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
-          <div className="flex gap-[80px]">
-            <div style={{ flex: '0 0 340px' }} className="sticky top-24 self-start">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-[80px]">
+            <div className="hidden md:block sticky top-24 self-start" style={{ flex: '0 0 340px' }}>
               <ScrollReveal>
                 <p className="font-semibold text-orange text-sm tracking-[0.08em] uppercase mb-3">De ce contează</p>
                 <h2 className="font-head font-extrabold tracking-tight text-charcoal mb-6" style={{ fontSize: 'clamp(26px, 2.8vw, 40px)', lineHeight: 1.25 }}>
@@ -241,7 +241,7 @@ export default function DesignPage() {
           </ScrollReveal>
 
           {/* Row 1 */}
-          <div className="flex gap-4 mb-4">
+          <div className="flex flex-col md:flex-row gap-4 mb-4">
             {[
               {
                 tag: 'Core service',
@@ -265,7 +265,7 @@ export default function DesignPage() {
                 flex: '1',
               },
             ].map(card => (
-              <ScrollReveal key={card.title} style={{ flex: card.flex }}>
+              <ScrollReveal key={card.title} className="w-full md:flex-1">
                 <div className="flex flex-col h-full rounded-[22px] p-8 transition-all duration-300" style={{ background: '#FDFAF5', border: '1px solid rgba(23,23,32,0.09)' }}>
                   <div className="text-[10px] font-bold tracking-[0.06em] uppercase text-orange mb-2">{card.tag}</div>
                   <h3 className="font-head font-bold text-charcoal mb-3" style={{ fontSize: 18 }}>{card.title}</h3>
@@ -281,7 +281,7 @@ export default function DesignPage() {
           </div>
 
           {/* Row 2 */}
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             {[
               {
                 tag: 'Print',
@@ -305,7 +305,7 @@ export default function DesignPage() {
                 flex: '0 0 28%',
               },
             ].map(card => (
-              <ScrollReveal key={card.title} style={{ flex: card.flex }}>
+              <ScrollReveal key={card.title} className="w-full md:flex-1">
                 <div className="flex flex-col h-full rounded-[22px] p-8 transition-all duration-300" style={{ background: '#FDFAF5', border: '1px solid rgba(23,23,32,0.09)' }}>
                   <div className="text-[10px] font-bold tracking-[0.06em] uppercase text-orange mb-2">{card.tag}</div>
                   <h3 className="font-head font-bold text-charcoal mb-3" style={{ fontSize: 18 }}>{card.title}</h3>
@@ -327,7 +327,7 @@ export default function DesignPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '36px 36px' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 400, top: -100, right: -80, background: 'radial-gradient(circle, rgba(14,32,80,0.5) 0%, transparent 70%)', filter: 'blur(100px)' }} aria-hidden="true" />
         <div className="mx-auto relative z-10" style={{ maxWidth: 1300 }}>
-          <div className="grid grid-cols-2 gap-[72px] items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[72px] items-start md:items-center">
             <ScrollReveal>
               <div>
                 <p className="font-semibold text-orange text-sm tracking-[0.08em] uppercase mb-6">Studiu de caz</p>
@@ -381,7 +381,7 @@ export default function DesignPage() {
       {/* BRAND SHOWCASE */}
       <section style={{ background: '#FDFAF5', padding: '100px 56px' }} aria-label="Ce livrăm">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
-          <div className="grid grid-cols-2 gap-[80px] items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[80px] items-start md:items-center">
             <ScrollReveal>
               <div>
                 <p className="font-semibold text-orange text-sm tracking-[0.08em] uppercase mb-3">Ce livrăm</p>
@@ -536,8 +536,8 @@ export default function DesignPage() {
       {/* FAQ */}
       <section style={{ background: '#F4F0E8', padding: '100px 56px' }} aria-label="Întrebări frecvente">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
-          <div className="flex gap-[80px]">
-            <div style={{ flex: '0 0 340px' }} className="sticky top-24 self-start">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-[80px]">
+            <div className="hidden md:block sticky top-24 self-start" style={{ flex: '0 0 340px' }}>
               <ScrollReveal>
                 <p className="font-semibold text-orange text-sm tracking-[0.08em] uppercase mb-3">Întrebări frecvente</p>
                 <h2 className="font-head font-extrabold tracking-tight text-charcoal mb-4" style={{ fontSize: 'clamp(28px, 2.5vw, 40px)', lineHeight: 1.1 }}>
