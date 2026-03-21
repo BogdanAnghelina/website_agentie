@@ -63,7 +63,7 @@ export default function GoogleAdsPage() {
             <p className="font-body text-[17px] leading-[1.72] mb-10" style={{ color: 'rgba(244,240,232,0.58)', maxWidth: 440, animation: 'hero-up 0.7s ease forwards 0.78s', opacity: 0 }}>
               Gestionăm campanii Google Ads pentru afaceri ambițioase. ROI mediu 4.7x, tracking complet, optimizare zilnică bazată pe date reale.
             </p>
-            <div className="flex items-center gap-3.5 mb-14 flex-wrap" style={{ animation: 'hero-up 0.7s ease forwards 0.92s', opacity: 0 }}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-14" style={{ animation: 'hero-up 0.7s ease forwards 0.92s', opacity: 0 }}>
               <Link href="/contact" className="inline-flex items-center gap-2 font-body text-[14.5px] font-semibold rounded-full no-underline transition-all hover:-translate-y-0.5" style={{ background: '#E8581A', color: '#1c0800', padding: '13px 26px' }}>
                 Audit gratuit Google Ads
                 <svg className="w-[15px] h-[15px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><line x1="2" y1="14" x2="14" y2="2"/><polyline points="4,2 14,2 14,12"/></svg>
@@ -72,7 +72,7 @@ export default function GoogleAdsPage() {
                 Cum lucrăm
               </Link>
             </div>
-            <div className="flex items-center gap-7" style={{ animation: 'hero-up 0.7s ease forwards 1.06s', opacity: 0 }}>
+            <div className="flex flex-wrap items-center gap-5 md:gap-7" style={{ animation: 'hero-up 0.7s ease forwards 1.06s', opacity: 0 }}>
               {[
                 { hi: '4.7', suf: 'x', lbl: 'ROAS mediu' },
                 { hi: '-38', suf: '%', lbl: 'Cost per lead' },
@@ -92,7 +92,7 @@ export default function GoogleAdsPage() {
           </div>
 
           {/* Right visual — search mockup */}
-          <div className="flex-1 flex items-center justify-center relative" style={{ height: 500, animation: 'hero-fade 1s ease forwards 0.4s', opacity: 0 }} aria-hidden="true">
+          <div className="hidden md:flex flex-1 items-center justify-center relative" style={{ height: 500, animation: 'hero-fade 1s ease forwards 0.4s', opacity: 0 }} aria-hidden="true">
             {/* Mini card A */}
             <div className="absolute rounded-[18px] z-[3]" style={{ top: 28, left: -60, background: 'rgba(15,15,25,0.85)', backdropFilter: 'blur(18px)', border: '1px solid rgba(255,255,255,0.1)', padding: '14px 16px', boxShadow: '0 20px 40px rgba(0,0,0,.35)', animation: 'mini-a 7.5s ease-in-out infinite', willChange: 'transform' }}>
               <div className="text-[9.5px] font-medium tracking-[0.05em] uppercase mb-1" style={{ color: 'rgba(244,240,232,0.30)' }}>Quality Score</div>
@@ -160,7 +160,7 @@ export default function GoogleAdsPage() {
           </div>
 
           {/* Breadcrumb */}
-          <div className="absolute bottom-8 left-14 flex items-center gap-2 text-[13px] z-[2]" style={{ color: 'rgba(244,240,232,0.30)' }}>
+          <div className="absolute bottom-8 left-5 md:left-14 flex items-center gap-2 text-[13px] z-[2]" style={{ color: 'rgba(244,240,232,0.30)' }}>
             <Link href="/" style={{ color: 'rgba(244,240,232,0.30)', textDecoration: 'none' }} className="hover:text-[rgba(244,240,232,0.58)] transition-colors">Acasă</Link>
             <span className="opacity-40">›</span>
             <Link href="/#servicii" style={{ color: 'rgba(244,240,232,0.30)', textDecoration: 'none' }} className="hover:text-[rgba(244,240,232,0.58)] transition-colors">Servicii</Link>
@@ -179,8 +179,8 @@ export default function GoogleAdsPage() {
       {/* WHY GOOGLE ADS */}
       <section className="bg-warm-white py-16 px-5 md:py-24 md:px-14">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div className="grid gap-20" style={{ gridTemplateColumns: '1fr 1.1fr', alignItems: 'start' }}>
-            <div className="sticky top-[120px]">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] gap-10 md:gap-20" style={{ alignItems: 'start' }}>
+            <div className="md:sticky md:top-[120px]">
               <ScrollReveal direction="left">
                 <div className="inline-flex items-center gap-[7px] text-[11.5px] font-semibold tracking-[0.07em] uppercase text-orange mb-4">
                   <span className="block w-5 h-0.5 bg-orange rounded-sm" />
@@ -400,8 +400,8 @@ export default function GoogleAdsPage() {
       {/* FAQ */}
       <section className="bg-cream py-16 px-5 md:py-24 md:px-14">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div className="grid gap-20" style={{ gridTemplateColumns: '1fr 1.6fr', alignItems: 'start' }}>
-            <div className="sticky top-[120px]">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 md:gap-20" style={{ alignItems: 'start' }}>
+            <div className="md:sticky md:top-[120px]">
               <ScrollReveal direction="left">
                 <div className="inline-flex items-center gap-[7px] text-[11.5px] font-semibold tracking-[0.07em] uppercase text-orange mb-4">
                   <span className="block w-5 h-0.5 bg-orange rounded-sm" />

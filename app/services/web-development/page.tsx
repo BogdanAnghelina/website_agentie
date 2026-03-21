@@ -149,7 +149,7 @@ export default function WebDevelopmentPage() {
       {/* WHY */}
       <section style={{ background: '#FDFBF7', padding: '96px 56px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 80, alignItems: 'start' }}>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] gap-8 md:gap-80" style={{ alignItems: 'start' }}>
             <ScrollReveal direction="left" style={{ position: 'sticky', top: 120 }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 11.5, fontWeight: 600, letterSpacing: '0.07em', textTransform: 'uppercase' as const, color: '#E8581A', marginBottom: 16 }}>
                 <span style={{ display: 'block', width: 20, height: 2, background: '#E8581A', borderRadius: 2 }} />
@@ -251,7 +251,7 @@ export default function WebDevelopmentPage() {
             </ScrollReveal>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 72, alignItems: 'center' }}>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-8 md:gap-72" style={{ alignItems: 'center' }}>
             <ScrollReveal direction="left">
               <blockquote style={{ fontFamily: 'var(--font-head)', fontSize: 'clamp(20px, 2.2vw, 30px)', fontWeight: 700, color: '#F4F0E8', lineHeight: 1.35, letterSpacing: '-0.02em', marginBottom: 28, fontStyle: 'italic' }}>
                 „Aveam trafic bun din Google Ads, dar rata de conversie era sub 2%. După ce Antigravity a reconstruit landing page-ul, am văzut rezultate în prima săptămână. Nu am schimbat bugetul — am schimbat site-ul."
@@ -346,7 +346,7 @@ export default function WebDevelopmentPage() {
       {/* FAQ */}
       <section style={{ background: '#F5F1E8', padding: '96px 56px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 md:gap-80" style={{ alignItems: 'start' }}>
             <ScrollReveal direction="left" style={{ position: 'sticky', top: 120 }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 11.5, fontWeight: 600, letterSpacing: '0.07em', textTransform: 'uppercase' as const, color: '#E8581A', marginBottom: 16 }}>
                 <span style={{ display: 'block', width: 20, height: 2, background: '#E8581A', borderRadius: 2 }} />

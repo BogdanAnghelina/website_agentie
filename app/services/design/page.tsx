@@ -95,7 +95,7 @@ export default function DesignPage() {
           </div>
 
           {/* Brand System Card */}
-          <div className="flex-1 flex items-center justify-center relative" style={{ animation: 'hero-fade 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s', opacity: 0, height: 500 }}>
+          <div className="hidden md:flex flex-1 items-center justify-center relative" style={{ animation: 'hero-fade 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s', opacity: 0, height: 500 }}>
             {/* Mini card: Livrare */}
             <div className="absolute flex flex-col gap-1 text-white rounded-[18px] px-4 py-3" style={{ top: 28, left: -60, background: 'rgba(15,15,25,0.85)', backdropFilter: 'blur(18px)', border: '1px solid rgba(255,255,255,0.1)', animation: 'mini-a 7.5s ease-in-out infinite', zIndex: 3 }}>
               <div className="text-[9.5px] font-medium uppercase tracking-wide" style={{ color: 'rgba(244,240,232,0.45)' }}>Livrare</div>

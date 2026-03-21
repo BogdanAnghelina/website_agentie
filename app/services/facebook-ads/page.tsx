@@ -93,7 +93,7 @@ export default function FacebookAdsPage() {
           </div>
 
           {/* FB Ad Preview Card */}
-          <div className="flex-1 flex items-center justify-center relative" style={{ animation: 'hero-fade 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s', opacity: 0 }}>
+          <div className="hidden md:flex flex-1 items-center justify-center relative" style={{ animation: 'hero-fade 1s cubic-bezier(0.16,1,0.3,1) forwards 0.5s', opacity: 0 }}>
             <div className="relative rounded-2xl overflow-hidden" style={{ width: 340, background: '#fff', boxShadow: '0 32px 80px rgba(0,0,0,0.45)', border: '1px solid rgba(255,255,255,0.08)' }}>
               {/* Ad Header */}
               <div className="flex items-center gap-3 p-4" style={{ borderBottom: '1px solid #f0f0f0' }}>
