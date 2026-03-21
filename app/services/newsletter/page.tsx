@@ -54,7 +54,7 @@ export default function NewsletterPage() {
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 500, top: -100, right: -60, background: 'radial-gradient(circle, rgba(232,88,26,0.17) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 14s ease-in-out infinite' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 360, height: 360, bottom: 40, left: -80, background: 'radial-gradient(circle, rgba(14,32,80,0.55) 0%, transparent 70%)', filter: 'blur(100px)', animation: 'blob-drift 18s ease-in-out infinite reverse 3s' }} aria-hidden="true" />
 
-        <section className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Newsletter hero">
+        <section className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center mx-auto gap-8 md:gap-[60px] px-5 pt-24 pb-12 sm:px-8 md:px-14 md:pt-28 md:pb-20" style={{ minHeight: '100dvh', maxWidth: 1300 }} aria-label="Newsletter hero">
           <div className="flex flex-col w-full md:w-auto" style={{ flex: '0 0 auto' }}>
             <div className="inline-flex items-center gap-2 rounded-full w-fit mb-8 text-[11.5px] font-medium tracking-[0.05em] uppercase" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', padding: '5px 14px 5px 8px', color: 'rgba(244,240,232,0.58)', animation: 'hero-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards 0.15s', opacity: 0 }}>
               <span className="w-[7px] h-[7px] bg-orange rounded-full flex-shrink-0" style={{ animation: 'pulse-ring 2.4s ease-in-out infinite' }} aria-hidden="true" />
@@ -77,7 +77,7 @@ export default function NewsletterPage() {
                 De ce email marketing
               </Link>
             </div>
-            <div className="flex gap-8 mt-12" style={{ animation: 'hero-up 0.75s cubic-bezier(0.16,1,0.3,1) forwards 1.1s', opacity: 0 }}>
+            <div className="grid grid-cols-2 sm:flex sm:gap-8 gap-y-4 mt-12" style={{ animation: 'hero-up 0.75s cubic-bezier(0.16,1,0.3,1) forwards 1.1s', opacity: 0 }}>
               {[
                 { value: '3.800%', label: 'ROI mediu email' },
                 { value: '42%', label: 'Open rate mediu' },
@@ -173,7 +173,7 @@ export default function NewsletterPage() {
       </div>
 
       {/* WHY EMAIL MARKETING */}
-      <section id="de-ce" style={{ background: '#FDFAF5', padding: '100px 56px' }} aria-label="De ce email marketing">
+      <section id="de-ce" className="px-5 py-16 sm:px-8 md:px-14 md:py-24" style={{ background: '#FDFAF5' }} aria-label="De ce email marketing">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
           <div className="flex flex-col md:flex-row gap-8 md:gap-[80px]">
             <div className="hidden md:block sticky top-24 self-start" style={{ flex: '0 0 340px' }}>
@@ -226,7 +226,7 @@ export default function NewsletterPage() {
       </section>
 
       {/* SERVICE TYPES */}
-      <section style={{ background: '#F4F0E8', padding: '100px 56px' }} aria-label="Servicii email marketing">
+      <section className="px-5 py-16 sm:px-8 md:px-14 md:py-24" style={{ background: '#F4F0E8' }} aria-label="Servicii email marketing">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
           <ScrollReveal>
             <div className="mb-14">
@@ -238,7 +238,7 @@ export default function NewsletterPage() {
           </ScrollReveal>
 
           {/* Row 1 */}
-          <div className="flex gap-4 mb-4">
+          <div className="flex flex-col md:flex-row gap-4 mb-4">
             {[
               {
                 tag: 'Strategie',
@@ -278,7 +278,7 @@ export default function NewsletterPage() {
           </div>
 
           {/* Row 2 */}
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             {[
               {
                 tag: 'Creștere',
@@ -320,7 +320,7 @@ export default function NewsletterPage() {
       </section>
 
       {/* CASE STUDY */}
-      <section style={{ background: '#1A1B25', padding: '100px 56px', position: 'relative', overflow: 'hidden' }} aria-label="Case study FashionHub">
+      <section className="px-5 py-16 sm:px-8 md:px-14 md:py-24" style={{ background: '#1A1B25', position: 'relative', overflow: 'hidden' }} aria-label="Case study FashionHub">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '36px 36px' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 500, height: 400, top: -100, right: -80, background: 'radial-gradient(circle, rgba(14,32,80,0.5) 0%, transparent 70%)', filter: 'blur(100px)' }} aria-hidden="true" />
         <div className="mx-auto relative z-10" style={{ maxWidth: 1300 }}>
@@ -344,12 +344,12 @@ export default function NewsletterPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal>
-              <div className="rounded-[28px] overflow-hidden" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 32px 64px rgba(0,0,0,0.4)' }}>
+              <div className="rounded-[28px] overflow-x-auto" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 32px 64px rgba(0,0,0,0.4)' }}>
                 <div className="flex items-center justify-between px-7 py-5" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
                   <span className="font-head font-bold text-[13px] text-[#F4F0E8]">FashionHub.ro — Email Impact</span>
                   <span className="text-[11px] font-medium rounded-full px-3 py-1" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.09)', color: 'rgba(244,240,232,0.45)' }}>Mar–Dec 2025</span>
                 </div>
-                <div className="grid px-7 py-3" style={{ gridTemplateColumns: '1fr 1fr 1fr', background: 'rgba(255,255,255,0.025)' }}>
+                <div className="grid min-w-[420px] px-7 py-3" style={{ gridTemplateColumns: '1fr 1fr 1fr', background: 'rgba(255,255,255,0.025)' }}>
                   {['Metrică', 'Înainte', 'După'].map((lbl, i) => (
                     <div key={lbl} className="text-[10.5px] font-semibold uppercase tracking-[0.05em]" style={{ color: 'rgba(244,240,232,0.35)', textAlign: i === 0 ? 'left' : i === 1 ? 'center' : 'right' }}>{lbl}</div>
                   ))}
@@ -360,7 +360,7 @@ export default function NewsletterPage() {
                   { metric: 'Revenue automatizări/lună', before: '€1,200', after: '€18,400', delta: '+1433%' },
                   { metric: 'Unsub rate', before: '2.1%', after: '0.28%', delta: '−87%' },
                 ].map(row => (
-                  <div key={row.metric} className="grid items-center px-7 py-5" style={{ gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                  <div key={row.metric} className="grid min-w-[420px] items-center px-7 py-5" style={{ gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
                     <div className="text-[13px] font-medium" style={{ color: 'rgba(244,240,232,0.7)' }}>{row.metric}</div>
                     <div className="font-head font-bold text-[17px] text-center" style={{ color: 'rgba(244,240,232,0.35)' }}>{row.before}</div>
                     <div className="flex items-center justify-end gap-2">
@@ -376,7 +376,7 @@ export default function NewsletterPage() {
       </section>
 
       {/* AUTOMATION FLOWS */}
-      <section style={{ background: '#FDFAF5', padding: '100px 56px' }} aria-label="Automation flows">
+      <section className="px-5 py-16 sm:px-8 md:px-14 md:py-24" style={{ background: '#FDFAF5' }} aria-label="Automation flows">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[80px] items-start md:items-center">
             <ScrollReveal>
@@ -419,8 +419,8 @@ export default function NewsletterPage() {
                   { trigger: 'Coș abandonat', flow: 'Abandoned Cart', detail: '3 emailuri · 24h', result: '18%', lbl: 'Recuperare' },
                   { trigger: 'Inactiv 90 zile', flow: 'Win-back', detail: '2 emailuri', result: '12%', lbl: 'Reactivare' },
                 ].map(row => (
-                  <div key={row.flow} className="flex items-center gap-4 px-6 py-4" style={{ borderBottom: '1px solid rgba(23,23,32,0.06)' }}>
-                    <div className="rounded-lg px-3 py-2 text-center flex-shrink-0" style={{ background: '#F4F0E8', minWidth: 100 }}>
+                  <div key={row.flow} className="flex flex-wrap items-center gap-3 px-4 sm:px-6 py-4" style={{ borderBottom: '1px solid rgba(23,23,32,0.06)' }}>
+                    <div className="rounded-lg px-3 py-2 text-center flex-shrink-0" style={{ background: '#F4F0E8', minWidth: 90 }}>
                       <div className="text-[9px] font-bold uppercase tracking-wide mb-1" style={{ color: '#A8A4B4' }}>Trigger</div>
                       <div className="text-[11px] font-semibold text-charcoal">{row.trigger}</div>
                     </div>
@@ -442,7 +442,7 @@ export default function NewsletterPage() {
       </section>
 
       {/* PROCESS */}
-      <section style={{ background: '#FDFAF5', padding: '0 56px 100px' }} aria-label="Procesul nostru">
+      <section className="px-5 pt-0 pb-16 sm:px-8 md:px-14 md:pb-24" style={{ background: '#FDFAF5' }} aria-label="Procesul nostru">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
           <ScrollReveal>
             <div className="mb-16" style={{ maxWidth: 560 }}>
@@ -502,7 +502,7 @@ export default function NewsletterPage() {
       </section>
 
       {/* FAQ */}
-      <section style={{ background: '#F4F0E8', padding: '100px 56px' }} aria-label="Întrebări frecvente">
+      <section className="px-5 py-16 sm:px-8 md:px-14 md:py-24" style={{ background: '#F4F0E8' }} aria-label="Întrebări frecvente">
         <div className="mx-auto" style={{ maxWidth: 1300 }}>
           <div className="flex flex-col md:flex-row gap-8 md:gap-[80px]">
             <div className="hidden md:block sticky top-24 self-start" style={{ flex: '0 0 340px' }}>
@@ -528,7 +528,7 @@ export default function NewsletterPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: '#0E1E50', padding: '110px 56px', position: 'relative', overflow: 'hidden' }} aria-label="Call to action">
+      <section className="px-5 py-16 sm:px-8 md:px-14 md:py-28" style={{ background: '#0E1E50', position: 'relative', overflow: 'hidden' }} aria-label="Call to action">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '40px 40px' }} aria-hidden="true" />
         <div className="absolute rounded-full pointer-events-none" style={{ width: 600, height: 600, top: -200, left: '50%', transform: 'translateX(-50%)', background: 'radial-gradient(circle, rgba(232,88,26,0.18) 0%, transparent 70%)', filter: 'blur(120px)' }} aria-hidden="true" />
         <div className="mx-auto text-center relative z-10" style={{ maxWidth: 720 }}>
